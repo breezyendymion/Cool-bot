@@ -31,13 +31,15 @@ async def on_message(message):
         phrase = random.choice(phrase_list)
         await message.channel.send(phrase)
     with io.open("phrases.txt", "a", encoding = "utf-8") as output:
+        if message.attachments:
+            output.write(message.attachments[0].url + '\n')
         output.write(message.content + '\n')
     await client.process_commands(message)
 
 @client.command()
 async def setchance(ctx, value = None):
-    if ctx.author.id != 488051426757574667:
-        return
+    if ctx.author.id != YOUR USER ID: #this is so only you can use it, 
+        return                        #if you don't want to lock it remove line 39 and 40
     if value == None:
         await ctx.send('Please chose a value to set')
         return

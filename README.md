@@ -22,7 +22,7 @@ After that, copy the token and put it in the token.txt file, just put it in ther
 
 ![copy token](images/copy_token.png)
 
-Something to note: the bot may need iresence intent and server member intent as it does log every message send, so you may need to enable those.
+Something to note: the bot may need iresence intent and server member intent as it does log every message sent, so you may need to enable those.
 
 ![presence intent](images/intent.png)
 
